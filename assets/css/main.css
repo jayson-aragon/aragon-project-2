@@ -34,16 +34,402 @@ body.index-page #trainers-index {
   display: none;
 }
 
+body.index-page .hero {
+  min-height: calc(100vh - 80px);
+  max-height: 820px;
+}
+
+body.index-page .hero:before {
+  background: linear-gradient(90deg, rgba(12, 48, 94, 0.82) 0%, rgba(24, 63, 120, 0.48) 58%, rgba(24, 63, 120, 0.12) 100%);
+}
+
+body.index-page .hero .container {
+  max-width: 1180px;
+}
+
+body.index-page .hero h2 {
+  max-width: 780px;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+body.index-page .hero p {
+  max-width: 620px;
+  font-size: 20px;
+}
+
+body.index-page .hero .btn-get-started {
+  border-color: #d1ad55;
+  background: #d1ad55;
+  color: #183f78;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 13px 28px;
+}
+
+body.index-page .about,
+body.index-page .why-us,
+body.index-page .courses {
+  padding: 96px 0;
+}
+
+body.index-page .about img {
+  border-radius: 8px;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+body.index-page .about .content {
+  align-self: center;
+  padding: 20px 32px;
+}
+
+body.index-page .why-us {
+  background: #f5f7fa;
+}
+
 body.index-page .why-us .why-box {
   min-height: 100%;
+  border-radius: 8px;
+  background: #183f78;
+  padding: 44px 36px;
 }
 
 body.index-page .why-us .icon-box {
-  padding: 28px 22px;
+  min-height: 245px;
+  border: 1px solid #e4e9ef;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 32px 24px;
+  align-items: flex-start !important;
+  box-shadow: 0 12px 30px rgba(24, 63, 120, 0.06);
+}
+
+body.index-page .why-us .icon-box i {
+  margin-bottom: 18px;
+  color: #d1ad55;
+}
+
+body.index-page .why-us .icon-box h4 {
+  text-align: left;
+}
+
+body.index-page .why-us .icon-box p {
+  text-align: left;
 }
 
 body.index-page .courses {
+  background: #ffffff;
+}
+
+/* Modern inner-page layout */
+body.about-page .page-title,
+body.courses-page .page-title {
+  --background-color: #183f78;
+  --accent-color: #183f78;
+}
+
+body.about-page .page-title .heading,
+body.courses-page .page-title .heading {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  border: 0;
+}
+
+body.about-page .page-title nav,
+body.courses-page .page-title nav {
+  background: #315b87;
+}
+
+body.about-page .about-us,
+body.courses-page .courses {
+  padding: 88px 0;
+}
+
+body.about-page .about-us img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+body.about-page .about-us .content {
+  align-self: center;
+  padding: 24px 36px;
+}
+
+body.about-page #counts {
   background: #f5f7fa;
+}
+
+body.about-page .counts .stats-item {
+  background: #ffffff;
+  border: 1px solid #e4e9ef;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(24, 63, 120, 0.05);
+}
+
+body.about-page #testimonials {
+  background: #ffffff;
+}
+
+body.about-page .section-title {
+  text-align: left;
+  padding-bottom: 36px;
+}
+
+body.about-page .testimonial-item,
+body.courses-page .course-item {
+  border: 1px solid #e4e9ef;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(24, 63, 120, 0.07);
+  overflow: hidden;
+}
+
+body.about-page .testimonial-wrap,
+body.about-page .testimonial-item {
+  height: 100%;
+}
+
+body.about-page .testimonial-wrap {
+  padding: 0;
+}
+
+body.about-page .testimonial-item {
+  min-height: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body.about-page .testimonials .testimonial-item .testimonial-img {
+  position: static;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid #f5f7fa;
+  border-radius: 50%;
+  margin: 0 0 16px 0;
+}
+
+body.about-page .testimonial-item h3,
+body.about-page .testimonial-item h4,
+body.about-page .testimonial-item p {
+  text-align: left;
+}
+
+body.courses-page .course-item img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+body.courses-page .course-item .course-content {
+  padding: 28px;
+}
+
+body.courses-page .course-item .trainer {
+  border-top: 1px solid #edf0f4;
+  padding-top: 18px;
+}
+
+@media (max-width: 991px) {
+  body.about-page .about-us .content {
+    padding: 20px 0 0;
+  }
+
+  body.about-page .about-us,
+  body.courses-page .courses {
+    padding: 64px 0;
+  }
+}
+
+body.index-page .courses .section-title {
+  text-align: left;
+  padding-bottom: 36px;
+}
+
+body.index-page .course-item {
+  border: 1px solid #e4e9ef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(24, 63, 120, 0.07);
+}
+
+body.index-page .course-item img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+body.index-page .course-item .course-content {
+  padding: 26px;
+}
+
+body.index-page .course-item .trainer {
+  border-top: 1px solid #edf0f4;
+  padding-top: 18px;
+}
+
+@media (max-width: 991px) {
+  body.index-page .hero {
+    min-height: 620px;
+  }
+
+  body.index-page .about,
+  body.index-page .why-us,
+  body.index-page .courses {
+    padding: 72px 0;
+  }
+
+  body.index-page .about .content {
+    padding: 20px 0 0;
+  }
+}
+
+@media (max-width: 575px) {
+  body.index-page .hero {
+    min-height: 540px;
+  }
+
+  body.index-page .hero h2 {
+    font-size: 40px;
+  }
+
+  body.index-page .about,
+  body.index-page .why-us,
+  body.index-page .courses {
+    padding: 56px 0;
+  }
+}
+
+/* Global alignment and consistent spacing */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container,
+.container-xl,
+.container-fluid {
+  box-sizing: border-box;
+}
+
+section .container,
+footer .container {
+  max-width: 1320px;
+}
+
+.row {
+  align-items: flex-start;
+}
+
+img {
+  display: block;
+}
+
+.course-item,
+.member,
+.card,
+.testimonial-item,
+.icon-box,
+.features-item {
+  height: 100%;
+}
+
+.course-item,
+.member,
+.card,
+.testimonial-item,
+.features-item {
+  width: 100%;
+}
+
+.course-item,
+.member,
+.card,
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-item .course-content,
+.member .member-content,
+.card .card-body,
+.testimonial-item {
+  flex: 1;
+}
+
+.course-item img,
+.member img,
+.card-img img,
+.event-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer .footer-top {
+  align-items: flex-start;
+}
+
+.footer .footer-links,
+.footer .footer-about,
+.footer .footer-newsletter {
+  min-width: 0;
+}
+
+.footer .footer-links ul,
+.footer .footer-newsletter p,
+.footer .footer-about p {
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 992px) {
+  section,
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .row {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  section,
+  .section,
+  body.about-page .about-us,
+  body.courses-page .courses {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 575px) {
+  section,
+  .section,
+  body.about-page .about-us,
+  body.courses-page .courses {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .footer .footer-top {
+    gap: 24px;
+  }
+
+  .footer .footer-links,
+  .footer .footer-about,
+  .footer .footer-newsletter {
+    width: 100%;
+  }
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -1934,24 +2320,33 @@ section,
 /*--------------------------------------------------------------
 # Trainers Section
 --------------------------------------------------------------*/
-.trainers .member {
-  position: relative;
+body.trainers-page #trainers .row {
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-.trainers .member .member-img {
-  margin: 0 80px;
+body.trainers-page #trainers .member {
+  position: relative;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+body.trainers-page .trainers .member .member-img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  border: 5px solid #f5f7fa;
+  box-shadow: 0 10px 28px rgba(24, 63, 120, 0.12);
 }
 
-@media (max-width: 1024px) {
-  .trainers .member .member-img {
-    margin: 0 60px;
-  }
-}
-
-.trainers .member .member-img img {
+body.trainers-page .trainers .member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
   position: relative;
   z-index: 1;
 }
@@ -1981,8 +2376,9 @@ section,
   color: var(--accent-color);
 }
 
-.trainers .member .member-info {
-  margin-top: 30px;
+body.trainers-page .trainers .member .member-info {
+  min-height: 150px;
+  margin-top: 22px;
 }
 
 .trainers .member .member-info h4 {

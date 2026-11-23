@@ -20,35 +20,54 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --default-color: #657181; /* Soft blue-gray text */
+  --heading-color: #183f78; /* Deep KCC blue for headings */
+  --accent-color: #d1ad55; /* Lighter gold inspired by the KCC seal */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
+/* KCC home-page layout */
+body.index-page #counts,
+body.index-page #features,
+body.index-page #trainers-index {
+  display: none;
+}
+
+body.index-page .why-us .why-box {
+  min-height: 100%;
+}
+
+body.index-page .why-us .icon-box {
+  padding: 28px 22px;
+}
+
+body.index-page .courses {
+  background: #f5f7fa;
+}
+
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #ffffff;  /* White text on the blue header */
+  --nav-hover-color: #ffffff; /* White text on header link hover */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #183f78; /* Blue text on the white dropdown menu */
+  --nav-dropdown-hover-color: #d1ad55; /* Gold dropdown hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #f5f7fa;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #315b87;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #547aa2;
   --contrast-color: #ffffff;
 }
 
@@ -222,8 +241,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #183f78;
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -244,7 +263,7 @@ h6 {
   margin: 0;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: #ffffff;
 }
 
 .header .btn-getstarted,
@@ -307,7 +326,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: #ffffff;
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -334,7 +353,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #ffffff;
   }
 
   .navmenu .dropdown ul {
@@ -397,7 +416,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: #ffffff;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -418,7 +437,7 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    background-color: #183f78;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     overflow-y: auto;
@@ -428,7 +447,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: #ffffff;
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -464,7 +483,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: #ffffff;
   }
 
   .navmenu .active i,

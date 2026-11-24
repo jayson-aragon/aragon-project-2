@@ -2654,8 +2654,132 @@ body.trainers-page .trainers .member .member-info {
 }
 
 /*--------------------------------------------------------------
+# Final Layout Cleanup
+--------------------------------------------------------------*/
+.main > section {
+  border-bottom: 1px solid rgba(24, 63, 120, 0.06);
+}
+
+body.index-page .about img,
+body.about-page .about-us img {
+  height: 440px;
+  max-height: none;
+  object-position: center;
+}
+
+body.index-page .course-item,
+body.courses-page .course-item {
+  overflow: hidden;
+}
+
+body.index-page .course-item > img,
+body.courses-page .course-item > img {
+  width: 100%;
+  height: 220px;
+  aspect-ratio: auto;
+  object-position: center;
+}
+
+body.index-page .course-item .course-content,
+body.courses-page .course-item .course-content {
+  display: flex;
+  flex-direction: column;
+}
+
+body.index-page .course-item .course-content .description,
+body.courses-page .course-item .course-content .description {
+  min-height: 64px;
+}
+
+body.index-page .course-item .trainer,
+body.courses-page .course-item .trainer {
+  margin-top: auto;
+  gap: 12px;
+}
+
+.events .card {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.events .card-img {
+  height: 280px;
+}
+
+.events .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.events .card-body {
+  min-height: 220px;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.page-title .heading {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 991px) {
+  body.index-page .about img,
+  body.about-page .about-us img {
+    height: 360px;
+  }
+
+  body.index-page .course-item > img,
+  body.courses-page .course-item > img {
+    height: 210px;
+  }
+
+  .events .card-img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 575px) {
+  body.index-page .about img,
+  body.about-page .about-us img {
+    height: 260px;
+  }
+
+  body.index-page .course-item > img,
+  body.courses-page .course-item > img {
+    height: 190px;
+  }
+
+  body.index-page .course-item .course-content,
+  body.courses-page .course-item .course-content {
+    padding: 22px;
+  }
+
+  body.index-page .course-item .course-content .description,
+  body.courses-page .course-item .course-content .description {
+    min-height: 0;
+  }
+
+  body.index-page .course-item .trainer,
+  body.courses-page .course-item .trainer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .events .card {
+    margin-bottom: 30px;
+  }
+
+  .events .card-img {
+    height: 220px;
+  }
+
+  .events .card-body {
+    min-height: 0;
+  }
+}
+
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
